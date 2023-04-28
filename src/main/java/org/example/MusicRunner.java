@@ -1,5 +1,12 @@
 package org.example;
 
+import org.example.musicAction.Disc;
+import org.example.musicAction.MusicProcessor;
+import org.example.track.ElectronicTrack;
+import org.example.track.MusicStyles;
+import org.example.track.PopTrack;
+import org.example.track.RockTrack;
+
 public class MusicRunner {
     public static void main(String[] args) {
         Disc disc = new Disc();
@@ -12,7 +19,7 @@ public class MusicRunner {
         disc.outputTracks();
         System.out.println();
 
-        MusicProcessor.sortDisc(disc,MusicStyles.ELECTRONIC);
+        MusicProcessor.sortDisc(disc, MusicStyles.ELECTRONIC);
         System.out.println();
 
         disc.outputTracks();

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.track;
 
 public enum MusicStyles {
     POP("поп"),

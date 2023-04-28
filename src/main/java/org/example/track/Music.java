@@ -1,4 +1,4 @@
-package org.example;
+package org.example.track;
 
 public abstract class Music {
     private String name;

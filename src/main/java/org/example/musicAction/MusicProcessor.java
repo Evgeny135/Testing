@@ -1,11 +1,13 @@
-package org.example;
+package org.example.musicAction;
+
+import org.example.track.Music;
+import org.example.track.MusicStyles;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class MusicProcessor {
-    public static List<Music> sortDisc(Disc disc,MusicStyles musicStyles){
+    public static List<Music> sortDisc(Disc disc, MusicStyles musicStyles){
         List<Music> sortedList = new ArrayList<>(disc.getMusicList());
         for (int i = 0; i < sortedList.size(); i++) {
             for (int j = 0; j < sortedList.size()-1; j++) {

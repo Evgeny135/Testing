@@ -1,9 +1,9 @@
-package org.example;
+package org.example.track;
 
-public class PopTrack extends Music{
+public class PopTrack extends Music {
 
     public PopTrack(double duration, String name) {
-        super(name,duration,MusicStyles.POP);
+        super(name,duration, MusicStyles.POP);
     }
 //    @Override
 //    public void play() {

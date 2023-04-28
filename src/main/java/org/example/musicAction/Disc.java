@@ -1,4 +1,6 @@
-package org.example;
+package org.example.musicAction;
+
+import org.example.track.Music;
 
 import java.util.ArrayList;
 import java.util.List;

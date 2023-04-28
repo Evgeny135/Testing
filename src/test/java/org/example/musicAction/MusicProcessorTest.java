@@ -1,5 +1,9 @@
-package org.example;
+package org.example.musicAction;
 
+import org.example.track.ElectronicTrack;
+import org.example.track.Music;
+import org.example.track.MusicStyles;
+import org.example.track.PopTrack;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -17,13 +21,13 @@ class MusicProcessorTest {
     private Disc disc;
 
     @Mock
-    private ElectronicTrack electronicTrack = new ElectronicTrack("Faded",5.0);
+    private ElectronicTrack oneElectronicTrack = new ElectronicTrack("Faded",5.0);
 
     @Mock
-    private PopTrack popTrack = new PopTrack(2.0,"Weeknd");
+    private PopTrack onePopTrack = new PopTrack(2.0,"Weeknd");
 
     @Mock
-    private ElectronicTrack electronicTrack1 = new ElectronicTrack("Alone",3.0);
+    private ElectronicTrack twoElectronicTrack = new ElectronicTrack("Alone",3.0);
 
     @Mock
     List<Music> mockMusicList;
@@ -40,16 +44,16 @@ class MusicProcessorTest {
     void sortDisc() {
         //arrange
 
-        Mockito.when(mockMusicList.get(0)).thenReturn(electronicTrack);
-        Mockito.when(mockMusicList.get(1)).thenReturn(popTrack);
-        Mockito.when(mockMusicList.get(2)).thenReturn(electronicTrack1);
+        Mockito.when(mockMusicList.get(0)).thenReturn(oneElectronicTrack);
+        Mockito.when(mockMusicList.get(1)).thenReturn(onePopTrack);
+        Mockito.when(mockMusicList.get(2)).thenReturn(twoElectronicTrack);
 
         //Mockito.when(disc.getMusicList()).thenReturn(mockMusicList);
 
         List<Music> rightMusicList = new ArrayList<>();
-        rightMusicList.add(electronicTrack);
-        rightMusicList.add(electronicTrack1);
-        rightMusicList.add(popTrack);
+        rightMusicList.add(oneElectronicTrack);
+        rightMusicList.add(twoElectronicTrack);
+        rightMusicList.add(onePopTrack);
 
         //act
         List<Music> actual = MusicProcessor.sortDisc(disc, MusicStyles.ELECTRONIC);

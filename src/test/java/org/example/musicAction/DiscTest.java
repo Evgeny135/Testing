@@ -1,10 +1,12 @@
-package org.example;
+package org.example.musicAction;
 
+import org.example.musicAction.Disc;
+import org.example.track.ElectronicTrack;
+import org.example.track.Music;
+import org.example.track.PopTrack;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
